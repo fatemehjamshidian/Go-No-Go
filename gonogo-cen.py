@@ -16,20 +16,20 @@ def display_letter(letter, z_pos):
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    glOrtho(0, 800, 0, 600, -1, 1)  # Set up orthographic projection matching window size
+    glOrtho(0, 800, 0, 600, -1, 1) 
 
     glMatrixMode(GL_MODELVIEW)
     glLoadIdentity()
 
     # Increase font size as it moves closer
-    scale = 1 + (30 + z_pos) * 0.05  # Adjust multiplier for smoother scaling
+    scale = 1 + (30 + z_pos) * 0.05 
     font_size = int(50 * scale)
     font = pygame.font.SysFont('arial', font_size)
 
     # Centering the text
     text_width = font.size(letter)[0]
     text_height = font.size(letter)[1]
-    drawText(400 - text_width / 2, 300 - text_height / 2, letter, font)  # Center text on the screen
+    drawText(400 - text_width / 2, 300 - text_height / 2, letter, font) 
 
     pygame.display.flip()
 
@@ -62,7 +62,6 @@ displayedNumbersg = []
 targetedClickg = []
 realClickg = []
 
-# Initialize Pygame and OpenGL
 pygame.init()
 pygame.display.set_mode((800, 600), DOUBLEBUF | OPENGL)
 pygame.display.set_caption("Moving Letter")
