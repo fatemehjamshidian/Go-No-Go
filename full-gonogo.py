@@ -64,7 +64,6 @@ displayedNumbersg = []
 targetedClickg = []
 realClickg = []
 
-# Initialize Pygame and set display mode
 pygame.init()
 
 info = pygame.display.Info()
